@@ -1,5 +1,5 @@
 package com.assignment1;
-
+// Take name as input and print a greeting message for that particular name.
 import java.util.Scanner;
 
 public class GreetingMessage {

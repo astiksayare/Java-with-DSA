@@ -1,5 +1,5 @@
 package com.assignment1;
-
+//Take two numbers and print the sum of both.
 import java.util.Scanner;
 
 public class SumOfTwoNumbers {

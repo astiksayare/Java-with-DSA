@@ -1,5 +1,6 @@
 package com.assignment1;
 
+//Take a number input and print the multiplication table for it.
 import  java.util.Scanner;
 
 class Multiplication {

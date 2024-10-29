@@ -1,5 +1,6 @@
 package com.assignment1;
 
+//Input a year and find whether it is a leap year or not.
 import java.util.Scanner;
 
 class LeapYear {

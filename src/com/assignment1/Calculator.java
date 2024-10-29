@@ -1,5 +1,6 @@
 package com.assignment1;
 
+// Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
 import java.util.Scanner;
 
 public class Calculator {
