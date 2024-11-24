@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Shadowing {
     static  double balance = 10000.01; // Shadowing
 
-    static  void checkBalance(int ...num) {
+    static void checkBalance(int ...num) {
         System.out.println(balance);
         int balance = 100;
         System.out.println(balance);
