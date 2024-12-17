@@ -6,44 +6,57 @@ import java.util.Scanner;
 public class Intro {
 
     public static void main(String[] args) {
-//        1D array
 //        Scanner scn = new Scanner(System.in);
 //
-//        int[] arr = new int[5];
-//        int[] arr1 = { 1, 2, 3, 4 };
-//        System.out.println(Arrays.toString(arr1));
-//        for(int ele: arr1) {
-//            System.out.print(ele+" ");
-//        }
+//		int[] arr = new int[5];
+//		System.out.println("Enter the elements" );
+//		for(int i = 0; i < arr.length; i++) {
+//			arr[i] = scn.nextInt();
+//		}
 //
-//        System.out.print("Enter the number in the array: ");
-//        for (int i = 0; i < arr.length; i++) {
-//            arr[i] = scn.nextInt();
-//        }
+//		System.out.print("Your array is: ");
+//		1st Approuch
+//		for(int i = 0; i < arr.length; i++) {
+//			System.out.print(arr[i]+ " ");
+//		}
 
-        // Printing all the array.
-//        for(int num: arr)
-//        {
-//            System.out.print(num+ " ");
-//        }
+//		2nd Approuch
+//		for(int i: arr) {
+//			System.out.print(i+" ");
+//		}
 
-//        System.out.println(Arrays.toString(arr));
+//		3rd Approuch
+		// System.out.println(Arrays.toString(arr));
 
-//        2D array
-        int[][] arr = {
-                        {1, 2, 3, 4},
-                        {5, 6, 7},
-                        {8, 9}
-                      };
-//        for (int[] ans: arr){
-//            System.out.println(Arrays.toString(ans));
-//        }
 
-        for (int row = 0; row < arr.length; row++) {
-            for (int col = 0; col < arr[row].length; col++) {
-                System.out.print(arr[row][col] + " ");
-            }
-            System.out.println();
-        }
+//		2D Arrays
+//		int[][] arr2d = new int[3][3];
+//
+//		System.out.println("Enter the elements");
+//		for(int row = 0; row < arr2d.length; row++) {
+//			for(int col = 0; col < arr2d[row].length; col++) {
+//				arr2d[row][col] = scn.nextInt();
+//			}
+//		}
+//
+//		System.out.println("Your 2d array");
+
+//		1st Approach
+//		for(int row = 0; row < arr2d.length; row++) {
+//			for(int col = 0; col < arr2d[row].length; col++) {
+//				System.out.print(arr2d[row][col]+ " ");
+//			}
+//			System.out.println();
+//		}
+
+//		2nd Approach
+//		for(int i = 0; i < arr2d.length; i++) {
+//			System.out.println(Arrays.toString(arr2d[i]));
+//		}
+
+//		3rd Approuch
+//		for(int[] ele: arr2d) {
+//			System.out.println(Arrays.toString(ele));
+//		}
     }
 }
