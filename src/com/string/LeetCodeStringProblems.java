@@ -46,11 +46,27 @@ public class LeetCodeStringProblems {
 
 //        4] https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
 
+        /*
         String[] word1 = {"ab", "c"}, word2 = {"a", "bc"};
         String res1 = String.join("", word1);
         String res2 = String.join("", word2);
 
         System.out.println(res1.equals(res2));
 
+         */
+
+        String s = "textbook";
+        String str1 = s.substring(0, s.length() / 2).toLowerCase();
+        String str2 = s.substring(s.length()/2 , s.length()).toLowerCase();
+        int count1 = 0;
+        int count2 = 0;
+        for(int i = 0; i < s.length() / 2; i++){
+            char ch1 = str1.charAt(i);
+            char ch2 = str2.charAt(i);
+            if(ch1 == 'a' || ch1 == 'e' || ch1 == 'i' || ch1 == 'o' || ch1 == 'u') count1++;
+            if(ch2 == 'a' || ch2 == 'e' || ch2 == 'i' || ch2 == 'o' || ch2 == 'u') count2++;
+        }
+
+        System.out.println(count1 == count2);
     }
 }
