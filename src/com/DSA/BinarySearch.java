@@ -33,8 +33,8 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 //        int[] arr = {-4, -2, 0, 4, 8, 10, 12, 13, 15, 19, 20, 22, 24, 55, 60};
-        int[] arr = {10, 9, 7, 4, 3, 1, 0};
-        int target = 9;
+        int[] arr = {9,6,4,2,3,5,7,0,1};
+        int target = 3;
 
         int ans = binarySearch(arr, target);
         System.out.println(ans);

@@ -476,8 +476,310 @@ public class Patterns {
     }
 
 
+    static void pattern17(int num){
+
+        /*
+                 * * * * *
+                 *       *
+                 *       *
+                 *       *
+                 *       *
+                 * * * * *
+         */
+       for(int row = 1; row <= num+1; row++){
+           for(int col = 1; col <= num; col++){
+               if(row == 1 || col == 1 || row == num+1 || col == num){
+                   System.out.print("* ");
+               }else {
+                   System.out.print("  ");
+               }
+           }
+
+           System.out.println();
+       }
+    }
+
+     static void pattern18(int num){
+
+        /*
+                    1
+                   2 2
+                  3 3 3
+                 4 4 4 4
+                5 5 5 5 5
+         */
+
+        for(int row = 1; row <= num; row++){
+            for(int space = 1; space <= num - row; space++){
+                System.out.print(" ");
+            }
+
+            for(int col = 1; col <= row; col++){
+                System.out.print(row+" ");
+            }
+
+            System.out.println();
+        }
+     }
+
+     static void pattern19(int num){
+
+        /*
+                        1
+                        0 1
+                        1 0 1
+                        0 1 0 1
+                        1 0 1 0 1
+         */
+
+        for(int row = 1; row <= num; row++){
+            for(int col = row; col >= 1; col--){
+                if(col % 2 == 0){
+                    System.out.print(0+" ");
+                }else
+                {
+                    System.out.print(1+" ");
+                }
+            }
+
+            System.out.println();
+        }
+     }
+
+
+     static void pattern20(int num){
+
+        /*
+                        1
+                      2 1 2
+                    3 2 1 2 3
+                  4 3 2 1 2 3 4
+                5 4 3 2 1 2 3 4 5
+         */
+
+        for(int row = 1; row <= num; row++){
+            for(int space = 1; space <= num - row; space++){
+                System.out.print("  ");
+            }
+
+            for(int col1 = row; col1 >= 1; col1--){
+                System.out.print(col1+" ");
+            }
+
+            for(int col2 = 2; col2 <= row; col2++){
+                System.out.print(col2+" ");
+            }
+
+            System.out.println();
+        }
+     }
+
+     static void pattern21(int num){
+
+        /*
+                    1 2 3 4
+                     2 3 4
+                      3 4
+                       4
+                      3 4
+                     2 3 4
+                    1 2 3 4
+         */
+
+       for(int row = 1; row < num * 2; row++){
+           int spaceCount = row < num ? row : num * 2 - row;
+           for(int space = 1; space < spaceCount; space++){
+               System.out.print(" ");
+           }
+
+           int count = row <= num ? row : num * 2 - row;
+           for(int col = count; col <= num; col++){
+               System.out.print(col+" ");
+           }
+
+           System.out.println();
+       }
+     }
+
+     static void pattern22(int num){
+
+        /*
+                    A
+                   ABC
+                  ABCDE
+                 ABCDEFG
+                ABCDEFGHI
+                 ABCDEFG
+                  ABCDE
+                   ABC
+                    A
+         */
+
+         int colCount = num - 1;
+         for(int row = 1; row < num * 2; row++){
+             int spCount = row <= num ? num - row : row - num;
+             for(int space = 1; space <= spCount; space++){
+                 System.out.print(" ");
+             }
+
+             char ch = 'A';
+             int count = row <= num ? row * 2 - 1 : (colCount--) * 2 - 1;
+             for(int col = 1; col <= count; col++){
+                 System.out.print(ch++);
+             }
+
+             System.out.println();
+         }
+     }
+    static void pattern23(int num){
+
+            /*
+                       1
+                      121
+                     12321
+                    1234321
+                     12321
+                      121
+                       1
+             */
+
+            int mid = (num / 2) + 1;
+
+            for(int row = 1; row <= num;  row++){
+                int spCount = row <= mid ? mid - row : row - mid;
+                System.out.print(" ".repeat(spCount));
+
+                int count = row <= mid ? row : num - row + 1;
+                for(int col1 = 1; col1 <= count; col1++){
+                    System.out.print(col1);
+                }
+
+                for(int col1 = count - 1; col1 > 0; col1--){
+                    System.out.print(col1);
+                }
+
+                System.out.println();
+            }
+
+         }
+
+    static void pattern24(int num){
+
+                /*
+                           1
+                          212
+                         32123
+                        4321234
+                         32123
+                          212
+                           1
+                 */
+
+                int mid = (num / 2) + 1;
+
+     for(int row = 1; row <= num;  row++){
+       int spCount = row <= mid ? mid - row : row - mid;
+       System.out.print(" ".repeat(spCount));
+
+       int count = row <= mid ? row : num - row + 1;
+        for(int col = count; col > 0; col--){
+           System.out.print(col);
+        }
+
+        for(int col = 2; col <= count; col++){
+           System.out.print(col);
+        }
+
+        System.out.println();
+     }
+
+    }
+
+    static void pattern25(int num){
+
+     /*
+                        1
+                        12
+                        123
+                        1234
+                        12345
+                        1234
+                        123
+                        12
+                        1
+     */
+        int revers = num - 1;
+        for(int row = 1; row < num * 2; row++){
+            int count = row <= num ? row : revers--;
+            for(int col = 1; col <= count; col++){
+                System.out.print(col);
+            }
+
+            System.out.println();
+        }
+    }
+    static void pattern26(int num){
+
+         /*
+                 1234321
+                  12321
+                   121
+                    1
+                   121
+                  12321
+                 1234321
+         */
+        for(int row = 1; row < num * 2 ; row++){
+            int count = row <= num ? row : num * 2 - row;
+            System.out.print(" ".repeat(count));
+
+            for(int col = 1; col <= (num - count) + 1; col++){
+                System.out.print(col);
+            }
+
+            for(int col = num - count; col >= 1; col--){
+                System.out.print(col);
+            }
+
+            System.out.println();
+        }
+     }
+
+     static void pattern27(int num){
+
+             /*
+                           A
+                          ABA
+                         ABCBA
+                        ABCDCBA
+             */
+           for(int row = 1; row < num; row++){
+
+               char ch = 'A';
+               for(int space = 1; space < num - row; space++){
+                   System.out.print(" ");
+               }
+
+               for(int col = 1; col <= row; col++){
+                   System.out.print(ch++);
+               }
+
+               ch--;
+               for(int col = row; col > 1; col--){
+                   System.out.print(--ch);
+               }
+
+               System.out.println();
+           }
+         }
+
+
+
+
+
     public static void main(String[] args) {
-        pattern16(5);
+
+        pattern27(5);
     }
 
 }

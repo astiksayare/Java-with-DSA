@@ -1,6 +1,7 @@
 package com.practice;
 
-import com.assignment3.functionsormethods.Methods;
+import com.functions.Methods;
+
 import java.util.Scanner;
 
 public class Program1 {
